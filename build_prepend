@@ -1,0 +1,3 @@
+echo "[libs]" > setup.cfg
+echo "system_freetype = true" >> setup.cfg
+echo "system_qhull = true" >> setup.cfg

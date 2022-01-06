@@ -1,0 +1,19 @@
+# This file contains additional build requirements that did not get
+# picked up automatically. One name per line, no whitespace.
+cairo-dev
+gtk3-dev
+numpy
+pytz
+freetype-dev
+libpng-dev
+tornado
+nose
+python-dateutil
+pyparsing
+gtk+-dev
+python3-tcl
+setuptools-python
+kiwisolver
+python-dateutil
+Pillow
+qhull-dev
