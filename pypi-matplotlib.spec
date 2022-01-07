@@ -33,7 +33,7 @@ BuildRequires : kiwisolver
 BuildRequires : libpng-dev
 BuildRequires : nose
 BuildRequires : numpy
-BuildRequires : pluggy
+BuildRequires : pypi(pluggy)
 BuildRequires : py-python
 BuildRequires : pyparsing
 BuildRequires : pypi(certifi)
@@ -51,7 +51,7 @@ BuildRequires : qhull-dev
 BuildRequires : setuptools-python
 BuildRequires : tornado
 BuildRequires : tox
-BuildRequires : virtualenv
+BuildRequires : pypi(virtualenv)
 
 %description
 |DiscourseBadge|_ |Gitter|_ |GitHubIssues|_ |GitTutorial|_
