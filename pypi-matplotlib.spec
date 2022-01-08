@@ -6,7 +6,7 @@
 #
 Name     : pypi-matplotlib
 Version  : 3.4.3
-Release  : 83
+Release  : 84
 URL      : https://files.pythonhosted.org/packages/21/37/197e68df384ff694f78d687a49ad39f96c67b8d75718bc61503e1676b617/matplotlib-3.4.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/21/37/197e68df384ff694f78d687a49ad39f96c67b8d75718bc61503e1676b617/matplotlib-3.4.3.tar.gz
 Source1  : https://files.pythonhosted.org/packages/21/37/197e68df384ff694f78d687a49ad39f96c67b8d75718bc61503e1676b617/matplotlib-3.4.3.tar.gz.asc
@@ -18,40 +18,34 @@ Requires: pypi-matplotlib-python = %{version}-%{release}
 Requires: pypi-matplotlib-python3 = %{version}-%{release}
 Requires: cycler
 Requires: kiwisolver
-Requires: pyparsing
-Requires: python-dateutil
-BuildRequires : Pillow
+Requires: pypi(pyparsing)
+Requires: pypi(python_dateutil)
 BuildRequires : buildreq-distutils3
-Provides: matplotlib
-Provides: matplotlib-python
-Provides: matplotlib-python3
 BuildRequires : cairo-dev
 BuildRequires : freetype-dev
 BuildRequires : gtk+-dev
 BuildRequires : gtk3-dev
 BuildRequires : kiwisolver
 BuildRequires : libpng-dev
-BuildRequires : nose
-BuildRequires : numpy
-BuildRequires : pypi(pluggy)
-BuildRequires : py-python
-BuildRequires : pyparsing
 BuildRequires : pypi(certifi)
 BuildRequires : pypi(cycler)
 BuildRequires : pypi(kiwisolver)
+BuildRequires : pypi(nose)
 BuildRequires : pypi(numpy)
 BuildRequires : pypi(pillow)
+BuildRequires : pypi(pluggy)
+BuildRequires : pypi(py)
 BuildRequires : pypi(pyparsing)
+BuildRequires : pypi(pytest)
 BuildRequires : pypi(python_dateutil)
-BuildRequires : pytest
+BuildRequires : pypi(pytz)
+BuildRequires : pypi(tornado)
+BuildRequires : pypi(tox)
+BuildRequires : pypi(virtualenv)
 BuildRequires : python-dateutil
 BuildRequires : python3-tcl
-BuildRequires : pytz
 BuildRequires : qhull-dev
 BuildRequires : setuptools-python
-BuildRequires : tornado
-BuildRequires : tox
-BuildRequires : pypi(virtualenv)
 
 %description
 |DiscourseBadge|_ |Gitter|_ |GitHubIssues|_ |GitTutorial|_
@@ -82,8 +76,6 @@ Requires: python3-core
 Provides: pypi(matplotlib)
 Requires: pypi(cycler)
 Requires: pypi(kiwisolver)
-Requires: pypi(pillow)
-Requires: pypi(pyparsing)
 Requires: pypi(python_dateutil)
 
 %description python3
@@ -104,7 +96,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641455298
+export SOURCE_DATE_EPOCH=1641653098
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "

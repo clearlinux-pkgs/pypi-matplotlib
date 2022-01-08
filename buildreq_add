@@ -2,18 +2,18 @@
 # picked up automatically. One name per line, no whitespace.
 cairo-dev
 gtk3-dev
-numpy
-pytz
+pypi(numpy)
+pypi(pytz)
 freetype-dev
 libpng-dev
-tornado
-nose
+pypi(tornado)
+pypi(nose)
 python-dateutil
-pyparsing
+pypi(pyparsing)
 gtk+-dev
 python3-tcl
 setuptools-python
 kiwisolver
 python-dateutil
-Pillow
+pypi(pillow)
 qhull-dev

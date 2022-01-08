@@ -2,5 +2,5 @@
 # picked up automatically. One name per line, no whitespace.
 cycler
 kiwisolver
-pyparsing
-python-dateutil
+pypi(pyparsing)
+pypi(python_dateutil)
