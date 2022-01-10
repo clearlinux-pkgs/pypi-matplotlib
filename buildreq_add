@@ -8,12 +8,12 @@ freetype-dev
 libpng-dev
 pypi(tornado)
 pypi(nose)
-python-dateutil
+pypi(python_dateutil)
 pypi(pyparsing)
 gtk+-dev
 python3-tcl
 setuptools-python
-kiwisolver
-python-dateutil
+pypi(kiwisolver)
+pypi(python_dateutil)
 pypi(pillow)
 qhull-dev
