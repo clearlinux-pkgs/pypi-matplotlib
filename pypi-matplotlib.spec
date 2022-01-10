@@ -6,7 +6,7 @@
 #
 Name     : pypi-matplotlib
 Version  : 3.4.3
-Release  : 84
+Release  : 85
 URL      : https://files.pythonhosted.org/packages/21/37/197e68df384ff694f78d687a49ad39f96c67b8d75718bc61503e1676b617/matplotlib-3.4.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/21/37/197e68df384ff694f78d687a49ad39f96c67b8d75718bc61503e1676b617/matplotlib-3.4.3.tar.gz
 Source1  : https://files.pythonhosted.org/packages/21/37/197e68df384ff694f78d687a49ad39f96c67b8d75718bc61503e1676b617/matplotlib-3.4.3.tar.gz.asc
@@ -17,7 +17,7 @@ Requires: pypi-matplotlib-license = %{version}-%{release}
 Requires: pypi-matplotlib-python = %{version}-%{release}
 Requires: pypi-matplotlib-python3 = %{version}-%{release}
 Requires: cycler
-Requires: kiwisolver
+Requires: pypi(kiwisolver)
 Requires: pypi(pyparsing)
 Requires: pypi(python_dateutil)
 BuildRequires : buildreq-distutils3
@@ -25,7 +25,6 @@ BuildRequires : cairo-dev
 BuildRequires : freetype-dev
 BuildRequires : gtk+-dev
 BuildRequires : gtk3-dev
-BuildRequires : kiwisolver
 BuildRequires : libpng-dev
 BuildRequires : pypi(certifi)
 BuildRequires : pypi(cycler)
@@ -33,16 +32,15 @@ BuildRequires : pypi(kiwisolver)
 BuildRequires : pypi(nose)
 BuildRequires : pypi(numpy)
 BuildRequires : pypi(pillow)
-BuildRequires : pypi(pluggy)
 BuildRequires : pypi(py)
 BuildRequires : pypi(pyparsing)
-BuildRequires : pypi(pytest)
 BuildRequires : pypi(python_dateutil)
 BuildRequires : pypi(pytz)
 BuildRequires : pypi(tornado)
-BuildRequires : pypi(tox)
-BuildRequires : pypi(virtualenv)
-BuildRequires : python-dateutil
+BuildRequires : pypi-pluggy
+BuildRequires : pypi-pytest
+BuildRequires : pypi-tox
+BuildRequires : pypi-virtualenv
 BuildRequires : python3-tcl
 BuildRequires : qhull-dev
 BuildRequires : setuptools-python
@@ -75,8 +73,6 @@ Group: Default
 Requires: python3-core
 Provides: pypi(matplotlib)
 Requires: pypi(cycler)
-Requires: pypi(kiwisolver)
-Requires: pypi(python_dateutil)
 
 %description python3
 python3 components for the pypi-matplotlib package.
@@ -96,7 +92,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641653098
+export SOURCE_DATE_EPOCH=1641844095
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
