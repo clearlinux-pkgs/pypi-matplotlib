@@ -12,7 +12,6 @@ pypi(python_dateutil)
 pypi(pyparsing)
 gtk+-dev
 python3-tcl
-setuptools-python
 pypi(kiwisolver)
 pypi(python_dateutil)
 pypi(pillow)
