@@ -1,3 +1,1 @@
-echo "[libs]" > setup.cfg
-echo "system_freetype = true" >> setup.cfg
-echo "system_qhull = true" >> setup.cfg
+sed -e 's|#system_freetype = False|system_freetype = True|' -e 's|#system_qhull = False|system_qhull = True|' mplsetup.cfg.template > mplsetup.cfg
