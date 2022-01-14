@@ -6,7 +6,7 @@
 #
 Name     : pypi-matplotlib
 Version  : 3.5.1
-Release  : 89
+Release  : 91
 URL      : https://files.pythonhosted.org/packages/8a/46/425a44ab9a71afd2f2c8a78b039c1af8ec21e370047f0ad6e43ca819788e/matplotlib-3.5.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/8a/46/425a44ab9a71afd2f2c8a78b039c1af8ec21e370047f0ad6e43ca819788e/matplotlib-3.5.1.tar.gz
 Source1  : https://files.pythonhosted.org/packages/8a/46/425a44ab9a71afd2f2c8a78b039c1af8ec21e370047f0ad6e43ca819788e/matplotlib-3.5.1.tar.gz.asc
@@ -16,10 +16,6 @@ License  : Apache-1.1 BSD-3-Clause CC0-1.0 HPND MIT OFL-1.0 OFL-1.1 Python-2.0
 Requires: pypi-matplotlib-license = %{version}-%{release}
 Requires: pypi-matplotlib-python = %{version}-%{release}
 Requires: pypi-matplotlib-python3 = %{version}-%{release}
-Requires: cycler
-Requires: pypi(kiwisolver)
-Requires: pypi(pyparsing)
-Requires: pypi(python_dateutil)
 BuildRequires : buildreq-distutils3
 BuildRequires : cairo-dev
 BuildRequires : freetype-dev
@@ -75,9 +71,14 @@ Summary: python3 components for the pypi-matplotlib package.
 Group: Default
 Requires: python3-core
 Provides: pypi(matplotlib)
+Requires: cycler
 Requires: pypi(cycler)
 Requires: pypi(fonttools)
+Requires: pypi(kiwisolver)
 Requires: pypi(packaging)
+Requires: pypi(pillow)
+Requires: pypi(pyparsing)
+Requires: pypi(python_dateutil)
 
 %description python3
 python3 components for the pypi-matplotlib package.
@@ -95,7 +96,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641989906
+export SOURCE_DATE_EPOCH=1642201744
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
