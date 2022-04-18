@@ -1,0 +1,26 @@
+From 112ec216e1bf9b68f4ba5ae8e5c41171add62618 Mon Sep 17 00:00:00 2001
+From: Elliott Sales de Andrade <quantum.analyst@gmail.com>
+Date: Thu, 3 Mar 2022 23:52:19 -0500
+Subject: [PATCH] Fix backend in matplotlibrc if unset in mplsetup.cfg
+
+As reported in https://github.com/matplotlib/matplotlib/issues/21660#issuecomment-1057440502
+
+Reference: https://github.com/matplotlib/matplotlib/pull/22596
+Upstream-Status: Backport
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index ea66596..330d0d4 100644
+--- a/setup.py
++++ b/setup.py
+@@ -214,7 +214,7 @@ def update_matplotlibrc(path):
+     template_lines[backend_line_idx] = (
+         "#backend: {}\n".format(setupext.options["backend"])
+         if setupext.options["backend"]
+-        else "##backend: Agg")
++        else "##backend: Agg\n")
+     path.write_text("".join(template_lines))
+ 
+ 

@@ -6,7 +6,7 @@
 #
 Name     : pypi-matplotlib
 Version  : 3.5.1
-Release  : 92
+Release  : 93
 URL      : https://files.pythonhosted.org/packages/8a/46/425a44ab9a71afd2f2c8a78b039c1af8ec21e370047f0ad6e43ca819788e/matplotlib-3.5.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/8a/46/425a44ab9a71afd2f2c8a78b039c1af8ec21e370047f0ad6e43ca819788e/matplotlib-3.5.1.tar.gz
 Source1  : https://files.pythonhosted.org/packages/8a/46/425a44ab9a71afd2f2c8a78b039c1af8ec21e370047f0ad6e43ca819788e/matplotlib-3.5.1.tar.gz.asc
@@ -43,6 +43,7 @@ BuildRequires : pypi-tox
 BuildRequires : pypi-virtualenv
 BuildRequires : python3-tcl
 BuildRequires : qhull-dev
+Patch1: backport-Fix-backend-in-matplotlibrc-if-unset-in-mplsetup.cfg.patch
 
 %description
 |DiscourseBadge|_ |Gitter|_ |GitHubIssues|_ |GitTutorial|_
@@ -87,6 +88,7 @@ python3 components for the pypi-matplotlib package.
 %prep
 %setup -q -n matplotlib-3.5.1
 cd %{_builddir}/matplotlib-3.5.1
+%patch1 -p1
 
 %build
 ## build_prepend content
@@ -96,7 +98,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1649784906
+export SOURCE_DATE_EPOCH=1650308058
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
