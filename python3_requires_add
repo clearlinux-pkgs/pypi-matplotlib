@@ -1,5 +1,6 @@
 cycler
 pypi(kiwisolver)
+pypi(numpy)
 pypi(pillow)
 pypi(pyparsing)
 pypi(python_dateutil)
