@@ -7,7 +7,6 @@ pypi(pytz)
 freetype-dev
 libpng-dev
 pypi(tornado)
-pypi(nose)
 pypi(python_dateutil)
 pypi(pyparsing)
 gtk+-dev

@@ -6,7 +6,7 @@
 #
 Name     : pypi-matplotlib
 Version  : 3.5.2
-Release  : 98
+Release  : 99
 URL      : https://files.pythonhosted.org/packages/2f/be/7d6e073a3eb740ebeba43a69f5de2b141fea50b801e24e0ae024ac94d4ac/matplotlib-3.5.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2f/be/7d6e073a3eb740ebeba43a69f5de2b141fea50b801e24e0ae024ac94d4ac/matplotlib-3.5.2.tar.gz
 Source1  : https://files.pythonhosted.org/packages/2f/be/7d6e073a3eb740ebeba43a69f5de2b141fea50b801e24e0ae024ac94d4ac/matplotlib-3.5.2.tar.gz.asc
@@ -28,7 +28,6 @@ BuildRequires : pypi(certifi)
 BuildRequires : pypi(cycler)
 BuildRequires : pypi(fonttools)
 BuildRequires : pypi(kiwisolver)
-BuildRequires : pypi(nose)
 BuildRequires : pypi(numpy)
 BuildRequires : pypi(packaging)
 BuildRequires : pypi(pillow)
@@ -120,7 +119,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1663623856
+export SOURCE_DATE_EPOCH=1664210100
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
