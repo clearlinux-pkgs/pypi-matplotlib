@@ -6,7 +6,7 @@
 #
 Name     : pypi-matplotlib
 Version  : 3.5.2
-Release  : 102
+Release  : 103
 URL      : https://files.pythonhosted.org/packages/2f/be/7d6e073a3eb740ebeba43a69f5de2b141fea50b801e24e0ae024ac94d4ac/matplotlib-3.5.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2f/be/7d6e073a3eb740ebeba43a69f5de2b141fea50b801e24e0ae024ac94d4ac/matplotlib-3.5.2.tar.gz
 Source1  : https://files.pythonhosted.org/packages/2f/be/7d6e073a3eb740ebeba43a69f5de2b141fea50b801e24e0ae024ac94d4ac/matplotlib-3.5.2.tar.gz.asc
@@ -119,7 +119,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1664210100
+export SOURCE_DATE_EPOCH=1666723792
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -144,18 +144,18 @@ popd
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-matplotlib
-cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE %{buildroot}/usr/share/package-licenses/pypi-matplotlib/3683efd59fb44e798efb22fd086a5b1e3a0aa700
-cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_AMSFONTS %{buildroot}/usr/share/package-licenses/pypi-matplotlib/91cf189e02755085234dd321326345846bf2949f
-cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_BAKOMA %{buildroot}/usr/share/package-licenses/pypi-matplotlib/9fa4f855f33fa4ed73c9e6865d534a4f0f910610
-cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_COLORBREWER %{buildroot}/usr/share/package-licenses/pypi-matplotlib/47a57a5629a135f4301bf8181c5e244e1baf5759
-cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_JSXTOOLS_RESIZE_OBSERVER %{buildroot}/usr/share/package-licenses/pypi-matplotlib/920b5b7e7e79918ab41e714c4002f3ad4a8fdcfc
-cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_QT4_EDITOR %{buildroot}/usr/share/package-licenses/pypi-matplotlib/04bb73e33817fa6c0c1259344f7326b408e12885
-cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_SOLARIZED %{buildroot}/usr/share/package-licenses/pypi-matplotlib/81b71443d2a101a27194d8d7e0494a93e557a824
-cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_YORICK %{buildroot}/usr/share/package-licenses/pypi-matplotlib/fd0bb2832315e88d7a06dd4f28a73f4eac46d3c6
-cp %{_builddir}/matplotlib-%{version}/doc/_static/fa/LICENSE %{buildroot}/usr/share/package-licenses/pypi-matplotlib/38f5fae1676b8f00409b0fb2979799ed35320999
-cp %{_builddir}/matplotlib-%{version}/doc/devel/license.rst %{buildroot}/usr/share/package-licenses/pypi-matplotlib/96cdc9c40477ab698d63b8c83fab29e2a8f72527
-cp %{_builddir}/matplotlib-%{version}/extern/agg24-svn/src/copying %{buildroot}/usr/share/package-licenses/pypi-matplotlib/467189783f672de8baca8b34e798fa2da64166a5
-cp %{_builddir}/matplotlib-%{version}/lib/matplotlib/mpl-data/fonts/ttf/LICENSE_DEJAVU %{buildroot}/usr/share/package-licenses/pypi-matplotlib/23e8fed3e3499427ef5a80cbff0aca0946140493
+cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE %{buildroot}/usr/share/package-licenses/pypi-matplotlib/3683efd59fb44e798efb22fd086a5b1e3a0aa700 || :
+cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_AMSFONTS %{buildroot}/usr/share/package-licenses/pypi-matplotlib/91cf189e02755085234dd321326345846bf2949f || :
+cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_BAKOMA %{buildroot}/usr/share/package-licenses/pypi-matplotlib/9fa4f855f33fa4ed73c9e6865d534a4f0f910610 || :
+cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_COLORBREWER %{buildroot}/usr/share/package-licenses/pypi-matplotlib/47a57a5629a135f4301bf8181c5e244e1baf5759 || :
+cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_JSXTOOLS_RESIZE_OBSERVER %{buildroot}/usr/share/package-licenses/pypi-matplotlib/920b5b7e7e79918ab41e714c4002f3ad4a8fdcfc || :
+cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_QT4_EDITOR %{buildroot}/usr/share/package-licenses/pypi-matplotlib/04bb73e33817fa6c0c1259344f7326b408e12885 || :
+cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_SOLARIZED %{buildroot}/usr/share/package-licenses/pypi-matplotlib/81b71443d2a101a27194d8d7e0494a93e557a824 || :
+cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_YORICK %{buildroot}/usr/share/package-licenses/pypi-matplotlib/fd0bb2832315e88d7a06dd4f28a73f4eac46d3c6 || :
+cp %{_builddir}/matplotlib-%{version}/doc/_static/fa/LICENSE %{buildroot}/usr/share/package-licenses/pypi-matplotlib/38f5fae1676b8f00409b0fb2979799ed35320999 || :
+cp %{_builddir}/matplotlib-%{version}/doc/devel/license.rst %{buildroot}/usr/share/package-licenses/pypi-matplotlib/96cdc9c40477ab698d63b8c83fab29e2a8f72527 || :
+cp %{_builddir}/matplotlib-%{version}/extern/agg24-svn/src/copying %{buildroot}/usr/share/package-licenses/pypi-matplotlib/467189783f672de8baca8b34e798fa2da64166a5 || :
+cp %{_builddir}/matplotlib-%{version}/lib/matplotlib/mpl-data/fonts/ttf/LICENSE_DEJAVU %{buildroot}/usr/share/package-licenses/pypi-matplotlib/23e8fed3e3499427ef5a80cbff0aca0946140493 || :
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
