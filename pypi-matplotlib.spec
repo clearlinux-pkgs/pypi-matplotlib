@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x8D86E7FAE5EB0C10 (quantum.analyst@gmail.com)
 #
 Name     : pypi-matplotlib
-Version  : 3.5.2
-Release  : 103
-URL      : https://files.pythonhosted.org/packages/2f/be/7d6e073a3eb740ebeba43a69f5de2b141fea50b801e24e0ae024ac94d4ac/matplotlib-3.5.2.tar.gz
-Source0  : https://files.pythonhosted.org/packages/2f/be/7d6e073a3eb740ebeba43a69f5de2b141fea50b801e24e0ae024ac94d4ac/matplotlib-3.5.2.tar.gz
-Source1  : https://files.pythonhosted.org/packages/2f/be/7d6e073a3eb740ebeba43a69f5de2b141fea50b801e24e0ae024ac94d4ac/matplotlib-3.5.2.tar.gz.asc
+Version  : 3.6.1
+Release  : 104
+URL      : https://files.pythonhosted.org/packages/0f/23/2eed6f40e1afca9c272fa7c13b437b7784c94a0c180f796c0da114265bf9/matplotlib-3.6.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/0f/23/2eed6f40e1afca9c272fa7c13b437b7784c94a0c180f796c0da114265bf9/matplotlib-3.6.1.tar.gz
+Source1  : https://files.pythonhosted.org/packages/0f/23/2eed6f40e1afca9c272fa7c13b437b7784c94a0c180f796c0da114265bf9/matplotlib-3.6.1.tar.gz.asc
 Summary  : Python plotting package
 Group    : Development/Tools
 License  : Apache-1.1 BSD-3-Clause CC-BY-4.0 CC0-1.0 HPND MIT OFL-1.0 OFL-1.1 Python-2.0
@@ -25,6 +25,7 @@ BuildRequires : gtk+-dev
 BuildRequires : gtk3-dev
 BuildRequires : libpng-dev
 BuildRequires : pypi(certifi)
+BuildRequires : pypi(contourpy)
 BuildRequires : pypi(cycler)
 BuildRequires : pypi(fonttools)
 BuildRequires : pypi(kiwisolver)
@@ -36,7 +37,6 @@ BuildRequires : pypi(pyparsing)
 BuildRequires : pypi(python_dateutil)
 BuildRequires : pypi(pytz)
 BuildRequires : pypi(setuptools_scm)
-BuildRequires : pypi(setuptools_scm_git_archive)
 BuildRequires : pypi(tornado)
 BuildRequires : pypi-pluggy
 BuildRequires : pypi-pytest
@@ -91,6 +91,7 @@ Requires: pypi-matplotlib-filemap = %{version}-%{release}
 Requires: python3-core
 Provides: pypi(matplotlib)
 Requires: cycler
+Requires: pypi(contourpy)
 Requires: pypi(cycler)
 Requires: pypi(fonttools)
 Requires: pypi(kiwisolver)
@@ -105,10 +106,10 @@ python3 components for the pypi-matplotlib package.
 
 
 %prep
-%setup -q -n matplotlib-3.5.2
-cd %{_builddir}/matplotlib-3.5.2
+%setup -q -n matplotlib-3.6.1
+cd %{_builddir}/matplotlib-3.6.1
 pushd ..
-cp -a matplotlib-3.5.2 buildavx2
+cp -a matplotlib-3.6.1 buildavx2
 popd
 
 %build
@@ -119,7 +120,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1666723792
+export SOURCE_DATE_EPOCH=1666741650
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
