@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x8D86E7FAE5EB0C10 (quantum.analyst@gmail.com)
 #
 Name     : pypi-matplotlib
-Version  : 3.6.1
-Release  : 104
-URL      : https://files.pythonhosted.org/packages/0f/23/2eed6f40e1afca9c272fa7c13b437b7784c94a0c180f796c0da114265bf9/matplotlib-3.6.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/0f/23/2eed6f40e1afca9c272fa7c13b437b7784c94a0c180f796c0da114265bf9/matplotlib-3.6.1.tar.gz
-Source1  : https://files.pythonhosted.org/packages/0f/23/2eed6f40e1afca9c272fa7c13b437b7784c94a0c180f796c0da114265bf9/matplotlib-3.6.1.tar.gz.asc
+Version  : 3.6.2
+Release  : 105
+URL      : https://files.pythonhosted.org/packages/91/1c/a48fd779287df3425c289cc2ff728980a5b355f15f4c3c40e1822770ba44/matplotlib-3.6.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/91/1c/a48fd779287df3425c289cc2ff728980a5b355f15f4c3c40e1822770ba44/matplotlib-3.6.2.tar.gz
+Source1  : https://files.pythonhosted.org/packages/91/1c/a48fd779287df3425c289cc2ff728980a5b355f15f4c3c40e1822770ba44/matplotlib-3.6.2.tar.gz.asc
 Summary  : Python plotting package
 Group    : Development/Tools
 License  : Apache-1.1 BSD-3-Clause CC-BY-4.0 CC0-1.0 HPND MIT OFL-1.0 OFL-1.1 Python-2.0
@@ -106,10 +106,10 @@ python3 components for the pypi-matplotlib package.
 
 
 %prep
-%setup -q -n matplotlib-3.6.1
-cd %{_builddir}/matplotlib-3.6.1
+%setup -q -n matplotlib-3.6.2
+cd %{_builddir}/matplotlib-3.6.2
 pushd ..
-cp -a matplotlib-3.6.1 buildavx2
+cp -a matplotlib-3.6.2 buildavx2
 popd
 
 %build
@@ -120,7 +120,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1666741650
+export SOURCE_DATE_EPOCH=1667485181
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
