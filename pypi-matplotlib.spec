@@ -6,7 +6,7 @@
 #
 Name     : pypi-matplotlib
 Version  : 3.6.2
-Release  : 105
+Release  : 106
 URL      : https://files.pythonhosted.org/packages/91/1c/a48fd779287df3425c289cc2ff728980a5b355f15f4c3c40e1822770ba44/matplotlib-3.6.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/91/1c/a48fd779287df3425c289cc2ff728980a5b355f15f4c3c40e1822770ba44/matplotlib-3.6.2.tar.gz
 Source1  : https://files.pythonhosted.org/packages/91/1c/a48fd779287df3425c289cc2ff728980a5b355f15f4c3c40e1822770ba44/matplotlib-3.6.2.tar.gz.asc
@@ -44,6 +44,9 @@ BuildRequires : pypi-tox
 BuildRequires : pypi-virtualenv
 BuildRequires : python3-tcl
 BuildRequires : qhull-dev
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 |PyPi|_ |Downloads|_ |NUMFocus|_
@@ -120,12 +123,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1667485181
+export SOURCE_DATE_EPOCH=1672289160
 export GCC_IGNORE_WERROR=1
-export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$FFLAGS -fno-lto "
-export FFLAGS="$FFLAGS -fno-lto "
-export CXXFLAGS="$CXXFLAGS -fno-lto "
+export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
