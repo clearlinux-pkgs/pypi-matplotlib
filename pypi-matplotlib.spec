@@ -7,7 +7,7 @@
 #
 Name     : pypi-matplotlib
 Version  : 3.7.1
-Release  : 112
+Release  : 114
 URL      : https://files.pythonhosted.org/packages/b7/65/d6e00376dbdb6c227d79a2d6ec32f66cfb163f0cd924090e3133a4f85a11/matplotlib-3.7.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/b7/65/d6e00376dbdb6c227d79a2d6ec32f66cfb163f0cd924090e3133a4f85a11/matplotlib-3.7.1.tar.gz
 Source1  : https://files.pythonhosted.org/packages/b7/65/d6e00376dbdb6c227d79a2d6ec32f66cfb163f0cd924090e3133a4f85a11/matplotlib-3.7.1.tar.gz.asc
@@ -23,6 +23,7 @@ BuildRequires : freetype-dev
 BuildRequires : gtk+-dev
 BuildRequires : gtk3-dev
 BuildRequires : libpng-dev
+BuildRequires : pypi(certifi)
 BuildRequires : pypi(kiwisolver)
 BuildRequires : pypi(numpy)
 BuildRequires : pypi(pillow)
@@ -31,6 +32,7 @@ BuildRequires : pypi(pybind11)
 BuildRequires : pypi(pyparsing)
 BuildRequires : pypi(python_dateutil)
 BuildRequires : pypi(pytz)
+BuildRequires : pypi(setuptools_scm)
 BuildRequires : pypi(tornado)
 BuildRequires : pypi-pluggy
 BuildRequires : pypi-pytest
@@ -71,6 +73,7 @@ Requires: python3-core
 Provides: pypi(matplotlib)
 Requires: cycler
 Requires: pypi(contourpy)
+Requires: pypi(fonttools)
 Requires: pypi(kiwisolver)
 Requires: pypi(numpy)
 Requires: pypi(pillow)
@@ -96,7 +99,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683044994
+export SOURCE_DATE_EPOCH=1683233892
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
