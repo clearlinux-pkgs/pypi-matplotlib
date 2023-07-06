@@ -5,7 +5,7 @@
 #
 Name     : pypi-matplotlib
 Version  : 3.7.2
-Release  : 116
+Release  : 117
 URL      : https://files.pythonhosted.org/packages/e5/59/b859fa2539b4121b016ea85758188203522fc12b0711de8b247cfec3cdac/matplotlib-3.7.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/e5/59/b859fa2539b4121b016ea85758188203522fc12b0711de8b247cfec3cdac/matplotlib-3.7.2.tar.gz
 Summary  : Python plotting package
@@ -97,13 +97,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1688657872
+export SOURCE_DATE_EPOCH=1688659156
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
+pypi-dep-fix.py . pyparsing
 python3 -m build --wheel --skip-dependency-check --no-isolation
 pushd ../buildavx2/
 ## build_prepend content
@@ -114,6 +115,7 @@ export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 export FFLAGS="$FFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v3 "
 export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
+pypi-dep-fix.py . pyparsing
 python3 -m build --wheel --skip-dependency-check --no-isolation
 
 popd
@@ -135,6 +137,7 @@ cp %{_builddir}/matplotlib-%{version}/doc/devel/license.rst %{buildroot}/usr/sha
 cp %{_builddir}/matplotlib-%{version}/extern/agg24-svn/src/copying %{buildroot}/usr/share/package-licenses/pypi-matplotlib/467189783f672de8baca8b34e798fa2da64166a5 || :
 cp %{_builddir}/matplotlib-%{version}/lib/matplotlib/mpl-data/fonts/ttf/LICENSE_DEJAVU %{buildroot}/usr/share/package-licenses/pypi-matplotlib/23e8fed3e3499427ef5a80cbff0aca0946140493 || :
 pip install --root=%{buildroot} --no-deps --ignore-installed dist/*.whl
+pypi-dep-fix.py %{buildroot} pyparsing
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
