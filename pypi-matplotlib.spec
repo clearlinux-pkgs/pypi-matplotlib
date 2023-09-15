@@ -4,13 +4,13 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-matplotlib
-Version  : 3.7.3
-Release  : 118
-URL      : https://files.pythonhosted.org/packages/bc/06/9ec4ae7c6c3a6e00f19b91439c2f226a4bb4adb24c84a7f8058a2224d2d0/matplotlib-3.7.3.tar.gz
-Source0  : https://files.pythonhosted.org/packages/bc/06/9ec4ae7c6c3a6e00f19b91439c2f226a4bb4adb24c84a7f8058a2224d2d0/matplotlib-3.7.3.tar.gz
+Version  : 3.8.0
+Release  : 119
+URL      : https://files.pythonhosted.org/packages/23/e1/77016194621fb1356aafeb2186f07b5dede62ea2043bf03f82325c4fccc5/matplotlib-3.8.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/23/e1/77016194621fb1356aafeb2186f07b5dede62ea2043bf03f82325c4fccc5/matplotlib-3.8.0.tar.gz
 Summary  : Python plotting package
 Group    : Development/Tools
-License  : BSD-3-Clause CC-BY-4.0 CC0-1.0 HPND MIT OFL-1.0 OFL-1.1 Python-2.0
+License  : Apache-2.0 BSD-3-Clause CC-BY-4.0 CC0-1.0 HPND MIT OFL-1.0 OFL-1.1 Python-2.0
 Requires: pypi-matplotlib-license = %{version}-%{release}
 Requires: pypi-matplotlib-python = %{version}-%{release}
 Requires: pypi-matplotlib-python3 = %{version}-%{release}
@@ -43,8 +43,9 @@ BuildRequires : qhull-dev
 %define debug_package %{nil}
 
 %description
-[![PyPi](https://badge.fury.io/py/matplotlib.svg)](https://badge.fury.io/py/matplotlib)
-[![Downloads](https://pepy.tech/badge/matplotlib/month)](https://pepy.tech/project/matplotlib)
+[![PyPi](https://img.shields.io/pypi/v/matplotlib)](https://pypi.org/project/matplotlib/)
+[![Conda](https://img.shields.io/conda/vn/conda-forge/matplotlib)](https://anaconda.org/conda-forge/matplotlib)
+[![Downloads](https://img.shields.io/pypi/dm/matplotlib)](https://pypi.org/project/matplotlib)
 [![NUMFocus](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 %package license
@@ -83,10 +84,10 @@ python3 components for the pypi-matplotlib package.
 
 
 %prep
-%setup -q -n matplotlib-3.7.3
-cd %{_builddir}/matplotlib-3.7.3
+%setup -q -n matplotlib-3.8.0
+cd %{_builddir}/matplotlib-3.8.0
 pushd ..
-cp -a matplotlib-3.7.3 buildavx2
+cp -a matplotlib-3.8.0 buildavx2
 popd
 
 %build
@@ -97,7 +98,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1694532303
+export SOURCE_DATE_EPOCH=1694799751
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -127,6 +128,7 @@ mkdir -p %{buildroot}/usr/share/package-licenses/pypi-matplotlib
 cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE %{buildroot}/usr/share/package-licenses/pypi-matplotlib/3683efd59fb44e798efb22fd086a5b1e3a0aa700 || :
 cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_AMSFONTS %{buildroot}/usr/share/package-licenses/pypi-matplotlib/91cf189e02755085234dd321326345846bf2949f || :
 cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_BAKOMA %{buildroot}/usr/share/package-licenses/pypi-matplotlib/9fa4f855f33fa4ed73c9e6865d534a4f0f910610 || :
+cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_COLORBREWER %{buildroot}/usr/share/package-licenses/pypi-matplotlib/032b9dc00790fcac1f05bcc7627b1572e4dbc09a || :
 cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_JSXTOOLS_RESIZE_OBSERVER %{buildroot}/usr/share/package-licenses/pypi-matplotlib/920b5b7e7e79918ab41e714c4002f3ad4a8fdcfc || :
 cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_QT4_EDITOR %{buildroot}/usr/share/package-licenses/pypi-matplotlib/04bb73e33817fa6c0c1259344f7326b408e12885 || :
 cp %{_builddir}/matplotlib-%{version}/LICENSE/LICENSE_SOLARIZED %{buildroot}/usr/share/package-licenses/pypi-matplotlib/81b71443d2a101a27194d8d7e0494a93e557a824 || :
@@ -155,6 +157,7 @@ popd
 
 %files license
 %defattr(0644,root,root,0755)
+/usr/share/package-licenses/pypi-matplotlib/032b9dc00790fcac1f05bcc7627b1572e4dbc09a
 /usr/share/package-licenses/pypi-matplotlib/04bb73e33817fa6c0c1259344f7326b408e12885
 /usr/share/package-licenses/pypi-matplotlib/23e8fed3e3499427ef5a80cbff0aca0946140493
 /usr/share/package-licenses/pypi-matplotlib/3683efd59fb44e798efb22fd086a5b1e3a0aa700
