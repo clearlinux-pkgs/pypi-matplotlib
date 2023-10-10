@@ -5,7 +5,7 @@
 #
 Name     : pypi-matplotlib
 Version  : 3.8.0
-Release  : 119
+Release  : 120
 URL      : https://files.pythonhosted.org/packages/23/e1/77016194621fb1356aafeb2186f07b5dede62ea2043bf03f82325c4fccc5/matplotlib-3.8.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/23/e1/77016194621fb1356aafeb2186f07b5dede62ea2043bf03f82325c4fccc5/matplotlib-3.8.0.tar.gz
 Summary  : Python plotting package
